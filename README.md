@@ -116,8 +116,7 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
             - Deleta um cliente específico
             - Parâmetros:
                 - id: id do cliente
-    
-    <h3>Rotas de produtos</h3>
+  <h3>Rotas de produtos</h3>
         
             - POST /newproduct
                 - Cria um novo produto
@@ -152,7 +151,7 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
                 - Parâmetros:
                     - id: id do produto
 
-    <h3>Rotas de vendas</h3>
+  <h3>Rotas de vendas</h3>
             
                 - POST /newsell
                     - Cria uma nova venda
@@ -164,7 +163,7 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
                             "precoUnitario": 123.45,
                             "precoTotal": 123.45,
                         }
-    <h3>Rotas de telefones</h3>
+  <h3>Rotas de telefones</h3>
 
                 - POST /newphone
                     - Cria um novo telefone
@@ -197,7 +196,7 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
                     - Parâmetros:
                         - id: id do telefone
 
-    <h3>Rotas de endereço</h3>
+  <h3>Rotas de endereço</h3>
     
                 - POST /newaddress
                     - Cria um novo endereço
