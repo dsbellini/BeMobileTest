@@ -36,12 +36,12 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
   3.1. Rodando a aplicação com Docker
   - Após instalar as dependências, execute o comando no terminal:
     - `docker-compose up` ou `docker-compose up -d` para rodar em segundo plano
-    - Esse comando subirá um container com a aplicação e outro com o banco de dados MySQL já com dados preenchidos nas tabelas para uma melhor avaliação.
+    - Esse comando subirá um container com a aplicação e outro com o banco de dados MySQL.
 
   3.2. Rodando a aplicação sem Docker
-    - Para rodar a aplicação sem o Docker, é necessário remover o arquivo " .env " que está na raiz do projeto.
-    - Você pode renomeá-lo ou excluir, fica a seu critério. É importante que não haja a variável de ambiente para rodar o projeto sem o Docker.
-    - Após instalar as dependências e remover a variável de ambiente, execute o comando no terminal:
+    <p>- Para rodar a aplicação sem o Docker, é necessário remover o arquivo " .env " que está na raiz do projeto.</p>
+    <p>- Você pode renomeá-lo ou excluir, fica a seu critério. É importante que não haja a variável de ambiente para rodar o projeto sem o Docker.</p>
+    <p>- Após instalar as dependências e remover a variável de ambiente, execute o comando no terminal:</p>
         - `npm start`
         - Esse comando subirá a aplicação na porta 3000
         - É importante ressaltar que é necessário ter o MySQL instalado na máquina para rodar a aplicação sem Docker.
