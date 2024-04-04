@@ -12,10 +12,6 @@ module.exports = {
             clienteId: {
                 type: sequelize_1.DataTypes.INTEGER,
                 allowNull: false,
-                references: {
-                    model: 'Clientes',
-                    key: 'id',
-                },
             },
             rua: {
                 type: sequelize_1.DataTypes.STRING,

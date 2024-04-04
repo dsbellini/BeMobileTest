@@ -8,4 +8,4 @@ const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(indexRoutes_1.default);
-app.listen(3000, () => console.log("Server is running on port 3000"));
+app.listen(3000, () => console.log("Servidor rodando na porta 3000"));

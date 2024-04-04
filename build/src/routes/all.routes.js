@@ -22,27 +22,27 @@ const addressController = new AddressController_1.default();
 router.post('/newuser', (req, res) => userController.createUser(req, res));
 router.post('/login', (req, res) => userController.login(req, res));
 // Customer routes
-router.post('/customer', verifyToken_1.verifyToken, (req, res) => customerController.createCustomer(req, res));
-router.get('/customer', verifyToken_1.verifyToken, (req, res) => customerController.findAllCustomers(req, res));
+router.post('/newcustomer', verifyToken_1.verifyToken, (req, res) => customerController.createCustomer(req, res));
+router.get('/customers', verifyToken_1.verifyToken, (req, res) => customerController.findAllCustomers(req, res));
 router.get('/customer/:id', verifyToken_1.verifyToken, (req, res) => customerController.findCustomerById(req, res));
 router.put('/customer/:id', verifyToken_1.verifyToken, (req, res) => customerController.updateCustomer(req, res));
 router.delete('/customer/:id', verifyToken_1.verifyToken, (req, res) => customerController.deleteCustomer(req, res));
 router.get('/customer/:id/sales', verifyToken_1.verifyToken, (req, res) => customerController.findCustomerWithSales(req, res));
 // Product routes
-router.post('/product', verifyToken_1.verifyToken, (req, res) => productController.createProduct(req, res));
+router.post('/newproduct', verifyToken_1.verifyToken, (req, res) => productController.createProduct(req, res));
 router.get('/product', verifyToken_1.verifyToken, (req, res) => productController.findAllProducts(req, res));
 router.get('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.findProductById(req, res));
 router.put('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.updateProduct(req, res));
 router.delete('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.deleteProduct(req, res));
 // Sell routes
-router.post('/sell', verifyToken_1.verifyToken, (req, res) => sellController.createSell(req, res));
+router.post('/newsell', verifyToken_1.verifyToken, (req, res) => sellController.createSell(req, res));
 // Phone routes
-router.post('/phone', verifyToken_1.verifyToken, (req, res) => phoneController.createPhone(req, res));
+router.post('/newphone', verifyToken_1.verifyToken, (req, res) => phoneController.createPhone(req, res));
 router.get('/phone', verifyToken_1.verifyToken, (req, res) => phoneController.findAllPhones(req, res));
 router.get('/phone/:id', verifyToken_1.verifyToken, (req, res) => phoneController.findPhoneById(req, res));
 router.delete('/phone/:id', verifyToken_1.verifyToken, (req, res) => phoneController.deletePhone(req, res));
 // Address routes
-router.post('/address', verifyToken_1.verifyToken, (req, res) => addressController.createAddress(req, res));
+router.post('/newaddress', verifyToken_1.verifyToken, (req, res) => addressController.createAddress(req, res));
 router.get('/address', verifyToken_1.verifyToken, (req, res) => addressController.findAllAddresses(req, res));
 router.get('/address/:id', verifyToken_1.verifyToken, (req, res) => addressController.findAddressById(req, res));
 router.put('/address/:id', verifyToken_1.verifyToken, (req, res) => addressController.updateAddress(req, res));

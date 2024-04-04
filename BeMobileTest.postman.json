@@ -1,0 +1,560 @@
+{
+  "info": {
+    "_postman_id": "9b87c93d-2b3a-4c23-b773-57930b981c0f",
+    "name": "BeMobileTest API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Rotas de usuário",
+      "item": [
+        {
+          "name": "Cria um novo usuário",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"Yourname\",\n    \"senha\": \"yourpassword\"\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newuser",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newuser"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Realiza o login do usuário",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"Yourname\",\n    \"senha\": \"yourpassword\"\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/login",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rotas de cliente",
+      "item": [
+        {
+          "name": "Cria um novo cliente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Yourname\",\n    \"cpf\": 123456\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newcustomer",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newcustomer"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todos os clientes cadastrados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/customers",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna um cliente específico",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "localhost:3000/customer/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customer",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todas as vendas de um cliente específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/customer/1/sales",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customer",
+                "1",
+                "sales"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todas as vendas de um cliente específico em um mês e ano específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/customer/1/sales?year=2024&month=4",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customer",
+                "1",
+                "sales"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2023",
+                  "description": ""
+                },
+                {
+                  "key": "month",
+                  "value": "2",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualiza um cliente específico",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Yourname\",\n    \"cpf\": \"1234567\"\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/customer/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customer",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deleta um cliente específico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/customer/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "customer",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rotas de produtos",
+      "item": [
+        {
+          "name": "Cria um novo produto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Productname\",\n    \"descricao\": \"Productdescription\",\n    \"preco\": 123.45\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newproduct",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newproduct"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todos os produtos cadastrados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/products",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna um produto específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/product/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualiza um produto específico",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Productname\",\n    \"descricao\": \"Productdescription\",\n    \"preco\": 123.45\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/product/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deleta um produto específico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/product/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rotas de vendas",
+      "item": [
+        {
+          "name": "Cria uma nova venda",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"clienteId\": 1,\n    \"produtoId\": 1,\n    \"quantidade\": 1,\n    \"precoUnitario\": 123.45,\n    \"precoTotal\": 123.45\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newsell",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newsell"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rotas de telefones",
+      "item": [
+        {
+          "name": "Cria um novo telefone",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"clienteId\": 1\n    \"numero\": 123456789\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newphone",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newphone"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todos os telefones cadastrados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/phones",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "phones"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna um telefone específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/phone/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "phone",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualiza um telefone específico",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"clienteId\": 1\n    \"numero\": 123456789\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/phone/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "phone",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deleta um telefone específico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/phone/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "phone",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rotas de endereço",
+      "item": [
+        {
+          "name": "Cria um novo endereço",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"clienteId\": 1\n    \"rua\": \"Rua do Cliente\",\n    \"numero\": 123,\n    \"bairro\": \"Bairro do Cliente\",\n    \"cidade\": \"Cidade do Cliente\",\n    \"estado\": \"Estado do Cliente\",\n    \"cep\": 12345678\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/newaddress",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "newaddress"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna todos os endereços cadastrados",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/addresses",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "addresses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retorna um endereço específico",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/address/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "address",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Atualiza um endereço específico",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"clienteId\": 1\n    \"rua\": \"Rua do Cliente\",\n    \"numero\": 123,\n    \"bairro\": \"Bairro do Cliente\",\n    \"cidade\": \"Cidade do Cliente\",\n    \"estado\": \"Estado do Cliente\",\n    \"cep\": 12345678\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/address/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "address",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Deleta um endereço específico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/address/1",
+              "protocol": "http",
+              "host": [
+                "localhost:3000"
+              ],
+              "path": [
+                "address",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

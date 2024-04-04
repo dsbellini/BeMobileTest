@@ -13,10 +13,6 @@ export = {
       clienteId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Clientes',
-          key: 'id',
-        },
       },
       rua: {
         type: DataTypes.STRING,

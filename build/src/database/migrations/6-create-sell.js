@@ -13,18 +13,18 @@ exports.default = {
             clienteId: {
                 type: sequelize_1.DataTypes.INTEGER,
                 allowNull: false,
-                references: {
-                    model: 'Clientes',
-                    key: 'id',
-                },
+                // references: {
+                //   model: 'Clientes',
+                //   key: 'id',
+                // },
             },
             produtoId: {
                 type: sequelize_1.DataTypes.INTEGER,
                 allowNull: false,
-                references: {
-                    model: 'Produtos',
-                    key: 'id',
-                },
+                // references: {
+                //   model: 'Produtos',
+                //   key: 'id',
+                // },
             },
             quantidade: {
                 type: sequelize_1.DataTypes.INTEGER,
