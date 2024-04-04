@@ -41,7 +41,7 @@ Agradeço a compreensão e a oportunidade de participar do processo seletivo. �
     - Esse comando subirá um container com o banco de dados MySQL.
     - Após subir o container com o Docker, execute o comando no terminal:
       - `npm run start-create`
-      - Esse comando criará as tabelas e iniciará o servidor.
+      - Esse comando criará e populará as tabelas e também iniciará o servidor.
 
   3.2. Rodando a aplicação sem Docker
     <p>- Após instalar as dependências e remover a variável de ambiente, execute o comando no terminal:</p>
