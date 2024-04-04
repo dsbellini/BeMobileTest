@@ -1,6 +1,6 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
-import { ISell } from '../interfaces';
+import { ISell } from '../../Interfaces/interfaces';
 import CustomerModel from '../models/SequelizeCustomer'; 
 import ProductModel from '../models/SequelizeProduct';
 

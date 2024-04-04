@@ -1,9 +1,9 @@
 import { QueryInterface, DataTypes, Sequelize, Model } from 'sequelize';
-import { IAdress } from '../interfaces';
+import { IAddress } from '../../Interfaces/interfaces';
 
 export = {
   up: async (queryInterface: QueryInterface) => {
-    await queryInterface.createTable<Model<IAdress>>('Enderecos', {
+    await queryInterface.createTable<Model<IAddress>>('Enderecos', {
       id: {
         allowNull: false,
         autoIncrement: true,

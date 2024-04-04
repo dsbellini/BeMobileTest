@@ -41,7 +41,7 @@ class ProductService {
     }
     ;
     async deleteProduct(id) {
-        await this.productModel.deleteProduct(id);
+        await this.productModel.updateProduct(id, { excluido: true });
         return { status: 'SUCCESS', data: { message: 'Produto deletado com sucesso!' } };
     }
 }

@@ -22,6 +22,7 @@ class ProductModel {
     async findAllProducts() {
         const allProducts = await this.model.findAll({
             order: [['nome', 'ASC']], // Ordena os resultados pelo campo 'nome' em ordem alfabética conforme solicitado.
+            where: { excluido: false }, // Retorna apenas os produtos que não foram excluídos.
         });
         return allProducts.map((product) => product.dataValues);
     }
@@ -39,9 +40,6 @@ class ProductModel {
             return null;
         }
         return updatedCustomer.dataValues;
-    }
-    async deleteProduct(id) {
-        await this.model.destroy({ where: { id } });
     }
 }
 exports.default = ProductModel;

@@ -1,5 +1,5 @@
 import { ServiceResponse } from '../Interfaces/ServiceResponse';
-import { IProduct } from '../database/interfaces';
+import { IProduct } from '../Interfaces/interfaces';
 import ProductModel from '../model/ProductModel';
 
 export default class ProductService {

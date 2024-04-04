@@ -1,4 +1,4 @@
-import { IProduct } from '../database/interfaces';
+import { IProduct } from '../Interfaces/interfaces';
 import SequelizeProduct from '../database/models/SequelizeProduct';
 
 export default class ProductModel {

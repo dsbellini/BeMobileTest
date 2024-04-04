@@ -1,4 +1,4 @@
-import { IUsuario } from '../database/interfaces';
+import { IUsuario } from '../Interfaces/interfaces';
 import SequelizeUser from '../database/models/SequelizeUser';
 
 export default class UserModel {

@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import UserModel from '../model/UserModel';
 import { ServiceResponse } from '../Interfaces/ServiceResponse';
-import { IUsuario } from '../database/interfaces';
+import { IUsuario } from '../Interfaces/interfaces';
 import jwtUtil from '../utils/jwt.util';
 
 export type Token = {

@@ -1,7 +1,8 @@
 import UserModel from '../model/UserModel';
 import { ServiceResponse } from '../Interfaces/ServiceResponse';
-import { ICustomer, IUsuario } from '../database/interfaces';
+import { ICustomer, ISell, IUsuario } from '../Interfaces/interfaces';
 import CustomerModel from '../model/CustomerModel';
+import SellModel from '../model/SellModel';
 
 export type Token = {
   token: string,
@@ -10,6 +11,7 @@ export type Token = {
 export default class CustomerService {
   constructor(
     private customerModel: CustomerModel = new CustomerModel(),
+    private sellModel: SellModel = new SellModel(),
   ) { }
 
   public async createCustomer(customer: ICustomer): Promise<ServiceResponse<ICustomer>> {
@@ -55,6 +57,20 @@ public async deleteCustomer(id: number): Promise<ServiceResponse<void>> {
   return { status: 'SUCCESS', data: { message: 'Cliente deletado com sucesso!' } };
 };
 
+public async findCustomerWithSales(customerId: number, year?: number, month?: number): 
+Promise<ServiceResponse<{ customer: ICustomer, sales: ISell[] }>> {
+    const customer = await this.customerModel.findCustomerById(customerId);
+    
+    if (!customer) {
+      return { status: 'NOT_FOUND', data: { message: 'Cliente não encontrado!' } };
+    }
 
+    let sales: ISell[] = await this.sellModel.findSalesByCustomerId(customerId, year, month);
+
+    // Ordena vendas por data em ordem decrescente (mais recentes primeiro)
+    sales = sales.sort((a, b) => (a.dataHora > b.dataHora ? -1 : 1));
+
+    return { status: 'SUCCESS', data: { customer, sales } };
+}
 
 };

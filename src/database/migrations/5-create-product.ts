@@ -1,5 +1,5 @@
 import { Model, QueryInterface, DataTypes, Sequelize } from 'sequelize';
-import { IProduct } from '../interfaces';
+import { IProduct } from '../../Interfaces/interfaces';
 
 export default {
   up: async (queryInterface: QueryInterface) => {

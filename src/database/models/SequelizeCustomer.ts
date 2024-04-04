@@ -1,6 +1,6 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
-import { ICustomer } from '../interfaces';
+import { ICustomer } from '../../Interfaces/interfaces';
 import UserModel from '../models/SequelizeUser';
 
 export interface CustomerInstance extends Model<ICustomer>, ICustomer {}
