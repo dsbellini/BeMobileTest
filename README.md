@@ -47,7 +47,7 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
 </details>
 
 <details>
-  <summary><strong>📍 Teste de rotas</strong></summary><br />
+  <summary><strong>📍 Testes de rotas</strong></summary><br />
 
   <p>Visando facilitar os testes de rotas, o projeto conta com um arquivo para importação de rotas no Insomnia/Postman.</p>
 
