@@ -6,8 +6,12 @@ COPY package*.json ./
 
 RUN npm install
 
+RUN npm run db:reset
+
 COPY . .
 
 EXPOSE 3000
+
+ENV DOCKER true
 
 CMD ["npm", "start"]
