@@ -10,7 +10,7 @@ export interface ICustomer {
   cpf: number,
 };
 
-export interface IAdress {
+export interface IAddress {
   id?: number,
   clienteId: number,
   rua: string,

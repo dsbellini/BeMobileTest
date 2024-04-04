@@ -34,5 +34,11 @@ class LoginController {
         const serviceResponse = await this.customerService.deleteCustomer(Number(id));
         return res.status((0, mapStatus_1.default)(serviceResponse.status)).json(serviceResponse.data);
     }
+    async findCustomerWithSales(req, res) {
+        const { id } = req.params;
+        const { year, month } = req.query;
+        const serviceResponse = await this.customerService.findCustomerWithSales(Number(id), Number(year), Number(month));
+        return res.status((0, mapStatus_1.default)(serviceResponse.status)).json(serviceResponse.data);
+    }
 }
 exports.default = LoginController;

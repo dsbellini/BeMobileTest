@@ -32,9 +32,7 @@ const ProductModel = index_1.default.define('Produtos', {
     tableName: 'Produtos',
     timestamps: false,
     defaultScope: {
-        where: {
-            excluido: false,
-        },
+        attributes: { exclude: ['excluido'] }, // Exclui a chave "excluido" por padrão nas consultas.
     },
 });
 exports.default = ProductModel;

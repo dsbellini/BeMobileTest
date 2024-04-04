@@ -1,14 +1,14 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
-import { IAdress } from '../interfaces';
+import { IAddress } from '../../Interfaces/interfaces';
 import CustomerModel from './SequelizeCustomer';
 
-export interface AddressInstance extends Model<IAdress>, IAdress {}
+export interface AddressInstance extends Model<IAddress>, IAddress {}
 
-type AddressSequelizeModelCreator = ModelDefined<AddressInstance, IAdress>;
+type AddressSequelizeModelCreator = ModelDefined<AddressInstance, IAddress>;
 
 const AddressModel: AddressSequelizeModelCreator = db.define(
-  'Endereco',
+  'Enderecos',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -47,7 +47,7 @@ const AddressModel: AddressSequelizeModelCreator = db.define(
     },
   },
   {
-    tableName: 'Endereco',
+    tableName: 'Enderecos',
     timestamps: false,
   }
 );

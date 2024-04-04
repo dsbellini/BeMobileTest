@@ -16,13 +16,9 @@ const PhoneModel = index_1.default.define('Telefones', {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
     },
-    clientId: {
+    clienteId: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
-        references: {
-            model: SequelizeCustomer_1.default,
-            key: 'id',
-        },
     },
 }, {
     tableName: 'Telefones',

@@ -1,6 +1,6 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
-import { IUsuario } from '../interfaces';
+import { IUsuario } from '../../Interfaces/interfaces';
 
 export interface UsuarioInstance extends Model<IUsuario>, IUsuario {}
 

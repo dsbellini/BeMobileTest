@@ -1,6 +1,6 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
-import { IPhoneNumber } from '../interfaces';
+import { IPhoneNumber } from '../../Interfaces/interfaces';
 import CustomerModel from '../models/SequelizeCustomer'
 
 export interface PhoneNumberInstance extends Model<IPhoneNumber>, IPhoneNumber {}
@@ -19,13 +19,9 @@ const PhoneModel: PhoneNumberSequelizeModelCreator = db.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    clientId: {
+    clienteId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {         
-        model: CustomerModel,
-        key: 'id',         
-      },
     },
   },
   {

@@ -1,5 +1,5 @@
 import { Model, QueryInterface, DataTypes, Sequelize } from 'sequelize';
-import { IPhoneNumber } from '../interfaces';
+import { IPhoneNumber } from '../../Interfaces/interfaces';
 
 export default {
   up: async (queryInterface: QueryInterface) => {
@@ -13,10 +13,6 @@ export default {
       clienteId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Clientes',
-          key: 'id',
-        },
       },
       numero: {
         type: DataTypes.INTEGER,

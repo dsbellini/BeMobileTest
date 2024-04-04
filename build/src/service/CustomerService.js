@@ -4,9 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const CustomerModel_1 = __importDefault(require("../model/CustomerModel"));
+const SellModel_1 = __importDefault(require("../model/SellModel"));
 class CustomerService {
-    constructor(customerModel = new CustomerModel_1.default()) {
+    constructor(customerModel = new CustomerModel_1.default(), sellModel = new SellModel_1.default()) {
         this.customerModel = customerModel;
+        this.sellModel = sellModel;
     }
     async createCustomer(customer) {
         if (!customer.nome || !customer.cpf) {
@@ -45,6 +47,16 @@ class CustomerService {
         return { status: 'SUCCESS', data: { message: 'Cliente deletado com sucesso!' } };
     }
     ;
+    async findCustomerWithSales(customerId, year, month) {
+        const customer = await this.customerModel.findCustomerById(customerId);
+        if (!customer) {
+            return { status: 'NOT_FOUND', data: { message: 'Cliente não encontrado!' } };
+        }
+        let sales = await this.sellModel.findSalesByCustomerId(customerId, year, month);
+        // Ordena vendas por data em ordem decrescente (mais recentes primeiro)
+        sales = sales.sort((a, b) => (a.dataHora > b.dataHora ? -1 : 1));
+        return { status: 'SUCCESS', data: { customer, sales } };
+    }
 }
 exports.default = CustomerService;
 ;

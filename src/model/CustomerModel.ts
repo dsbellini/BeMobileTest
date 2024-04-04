@@ -1,6 +1,5 @@
-import { ICustomer, IUsuario } from '../database/interfaces';
+import { ICustomer, IUsuario } from '../Interfaces/interfaces';
 import SequelizeCustomer from '../database/models/SequelizeCustomer';
-import SequelizeUser from '../database/models/SequelizeUser';
 
 export default class CustomerModel {
   private model = SequelizeCustomer;
