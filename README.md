@@ -16,7 +16,7 @@ Agradeço a compreensão e a oportunidade de participar do processo seletivo. �
   <summary><strong>👨‍💻 O que foi desenvolvido</strong></summary><br />
 
 
-Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A API foi desenvolvida utilizando o framework Express.js. A aplicação permite o cadastro de clientes, produtos e vendas, além de permitir a busca de vendas por cliente e por mês e ano. A API foi desenvolvida utilizando o padrão MSC e possui uma camada de autenticação de usuários.
+Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A API foi desenvolvida utilizando o framework Express.js. A aplicação permite o cadastro de clientes, produtos e vendas, além de permitir a busca de vendas por cliente e por mês e ano. A API foi desenvolvida utilizando o padrão MSC e possui uma camada de autenticação de usuários. Para facilitar os testes, implementei um docker-compose que cria uma base de dados MySQL.
 </details>
 
 # Orientações
