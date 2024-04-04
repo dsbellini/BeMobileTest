@@ -29,6 +29,10 @@
   },
   "dependencies": {
     "@types/sequelize": "^4.28.20",
-    "mysql2": "^3.9.3"
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "bcryptjs": "^2.4.3",
+    "mysql2": "^3.9.3",
+    "jsonwebtoken": "^9.0.2"
   }
 }

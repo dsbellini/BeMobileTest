@@ -1,21 +1,18 @@
 export interface IUsuario {
-  id: number,
+  id?: number,
   email: string,
   senha: string,
-  createdAt: Date,
-  updatedAt: Date,
 };
 
 export interface ICustomer {
-  id: number,
+  id?: number,
   nome: string,
   cpf: number,
-  createdAt: Date,
-  updatedAt: Date,
 };
 
 export interface IAdress {
-  id: number,
+  id?: number,
+  clienteId: number,
   rua: string,
   numero: number,
   bairro: string,
@@ -23,35 +20,28 @@ export interface IAdress {
   estado: string,
   cep: number,
   complemento: string,
-  createdAt: Date,
-  updatedAt: Date,
 };
 
 export interface IPhoneNumber {
-  id: number,
+  id?: number,
   clienteId: number,
   numero: number,
-  createdAt: Date,
-  updatedAt: Date,
 }
 
 export interface IProduct {
-  id: number,
+  id?: number,
   nome: string,
   descricao: string,
   preco: number,
-  createdAt: Date,
-  updatedAt: Date,
+  excluido?: boolean,
 }
 
 export interface ISell {
-  id: number;
+  id?: number;
   clienteId: number;
   produtoId: number;
   quantidade: number;
   precoUnitario: number;
   precoTotal: number;
   dataHora: Date;
-  createdAt: Date;
-  updatedAt: Date;
 }

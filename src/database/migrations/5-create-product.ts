@@ -19,15 +19,9 @@ export default {
       preco: {
         type: DataTypes.FLOAT,
       },
-      createdAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      excluido: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
     });
   },

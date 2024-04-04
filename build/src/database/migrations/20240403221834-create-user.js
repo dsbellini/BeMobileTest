@@ -16,6 +16,12 @@ exports.default = {
             senha: {
                 type: sequelize_1.DataTypes.STRING,
             },
+            nome: {
+                type: sequelize_1.DataTypes.STRING,
+            },
+            cpf: {
+                type: sequelize_1.DataTypes.INTEGER,
+            },
             createdAt: {
                 allowNull: false,
                 type: sequelize_1.DataTypes.DATE,

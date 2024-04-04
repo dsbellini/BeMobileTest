@@ -1,6 +1,7 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
 import { IAdress } from '../interfaces';
+import CustomerModel from './SequelizeCustomer';
 
 export interface AddressInstance extends Model<IAdress>, IAdress {}
 
@@ -13,6 +14,14 @@ const AddressModel: AddressSequelizeModelCreator = db.define(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+    },
+    clienteId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: CustomerModel,
+        key: 'id',
+      },
     },
     rua: {
       type: DataTypes.STRING,
@@ -35,16 +44,6 @@ const AddressModel: AddressSequelizeModelCreator = db.define(
     complemento: {
       type: DataTypes.STRING,
       allowNull: true, // Definindo allowNull como true para permitir valores nulos caso não haja complemento.
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
     },
   },
   {

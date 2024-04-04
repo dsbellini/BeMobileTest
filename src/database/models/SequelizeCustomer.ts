@@ -1,12 +1,13 @@
 import { DataTypes, Model, ModelDefined } from 'sequelize';
 import db from './index';
 import { ICustomer } from '../interfaces';
+import UserModel from '../models/SequelizeUser';
 
 export interface CustomerInstance extends Model<ICustomer>, ICustomer {}
 
 type CustomerSequelizeModelCreator = ModelDefined<CustomerInstance, ICustomer>;
 
-const UsuarioModel: CustomerSequelizeModelCreator = db.define(
+const CustomerModel: CustomerSequelizeModelCreator = db.define(
   'Clientes',
   {
     id: {
@@ -16,19 +17,11 @@ const UsuarioModel: CustomerSequelizeModelCreator = db.define(
     },
     nome: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     cpf: {
       type: DataTypes.INTEGER,
-    },
-    createdAt: {
-      type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
     },
   },
   {
@@ -37,4 +30,4 @@ const UsuarioModel: CustomerSequelizeModelCreator = db.define(
   }
 );
 
-export default UsuarioModel;
+export default CustomerModel;

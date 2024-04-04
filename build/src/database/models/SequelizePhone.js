@@ -24,16 +24,6 @@ const PhoneModel = index_1.default.define('Telefones', {
             key: 'id',
         },
     },
-    createdAt: {
-        type: sequelize_1.DataTypes.DATE,
-        allowNull: false,
-        defaultValue: index_1.default.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-        type: sequelize_1.DataTypes.DATE,
-        allowNull: false,
-        defaultValue: index_1.default.literal('CURRENT_TIMESTAMP'),
-    },
 }, {
     tableName: 'Telefones',
     timestamps: false,
