@@ -71,7 +71,8 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
     
     - POST /login
         - Realiza o login do usuário
-        - Retorna um token de autenticação para ser utilizado nas demais rotas. Lembre-se de adicionar o token no header Authorization da requisição para as demais rotas.
+        - Retorna um token de autenticação para ser utilizado nas demais rotas. 
+        - Lembre-se de adicionar o token no header Authorization da requisição para as demais rotas.
         - Body:
             {
                 "email": "Yourname",
