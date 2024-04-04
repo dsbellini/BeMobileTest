@@ -42,13 +42,11 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
       - Esse comando criará as tabelas e iniciará o servidor.
 
   3.2. Rodando a aplicação sem Docker
-    <p>- Para rodar a aplicação sem o Docker, é necessário remover o arquivo " .env " que está na raiz do projeto.</p>
-    <p>- Você pode renomeá-lo ou excluir, fica a seu critério. É importante que não haja a variável de ambiente para rodar o projeto sem o Docker.</p>
     <p>- Após instalar as dependências e remover a variável de ambiente, execute o comando no terminal:</p>
-        - `npm start`
+        - `npm run start-create`
         - Esse comando subirá a aplicação na porta 3000
         - É importante ressaltar que é necessário ter o MySQL instalado na máquina para rodar a aplicação sem Docker.
-        - Para realizar o preenchimento do banco de dados, rode o comando `npm run db:reset` para criar as tabelas e preencher com dados de teste.
+        - Para resetar o banco de dados, rode o comando `npm run db:reset` para criar as tabelas e preencher com dados de teste novamente.
 </details>
 
 <details>
