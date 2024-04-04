@@ -11,6 +11,7 @@
     "db:migrate": "ts-node node_modules/.bin/sequelize-cli db:migrate",
     "db:seed": "ts-node node_modules/.bin/sequelize-cli db:seed:all",
     "db:reset": "npm run build && ts-node node_modules/.bin/sequelize-cli db:drop && ts-node node_modules/.bin/sequelize-cli db:create && ts-node node_modules/.bin/sequelize-cli db:migrate && ts-node node_modules/.bin/sequelize-cli db:seed:all",
+    "start-create": "npm run db:reset && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

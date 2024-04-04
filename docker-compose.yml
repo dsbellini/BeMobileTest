@@ -1,25 +1,12 @@
 version: '3.8'
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: beMobile_node_app
-    restart: unless-stopped
-    ports:
-      - "3000:3000" 
-    volumes:
-      - .:/app 
-    depends_on:
-      - db 
-
   db:
     image: mysql:latest
     container_name: mysql_db_beMobile
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: 123  
+      MYSQL_ROOT_PASSWORD: 123
       MYSQL_DATABASE: BeMobile_dev 
     ports:
       - "3306:3306" 

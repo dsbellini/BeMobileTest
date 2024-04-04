@@ -35,8 +35,11 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
 
   3.1. Rodando a aplicação com Docker
   - Após instalar as dependências, execute o comando no terminal:
-    - `docker-compose up` ou `docker-compose up -d` para rodar em segundo plano
-    - Esse comando subirá um container com a aplicação e outro com o banco de dados MySQL.
+    - `docker-compose up --build` ou `docker-compose up --build -d` para rodar em segundo plano
+    - Esse comando subirá um container com o banco de dados MySQL.
+    - Após subir o container com o Docker, execute o comando no terminal:
+      - `npm run start-create`
+      - Esse comando criará as tabelas e iniciará o servidor.
 
   3.2. Rodando a aplicação sem Docker
     <p>- Para rodar a aplicação sem o Docker, é necessário remover o arquivo " .env " que está na raiz do projeto.</p>

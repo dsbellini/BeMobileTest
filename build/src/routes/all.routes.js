@@ -30,7 +30,7 @@ router.delete('/customer/:id', verifyToken_1.verifyToken, (req, res) => customer
 router.get('/customer/:id/sales', verifyToken_1.verifyToken, (req, res) => customerController.findCustomerWithSales(req, res));
 // Product routes
 router.post('/newproduct', verifyToken_1.verifyToken, (req, res) => productController.createProduct(req, res));
-router.get('/product', verifyToken_1.verifyToken, (req, res) => productController.findAllProducts(req, res));
+router.get('/products', verifyToken_1.verifyToken, (req, res) => productController.findAllProducts(req, res));
 router.get('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.findProductById(req, res));
 router.put('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.updateProduct(req, res));
 router.delete('/product/:id', verifyToken_1.verifyToken, (req, res) => productController.deleteProduct(req, res));
@@ -38,12 +38,12 @@ router.delete('/product/:id', verifyToken_1.verifyToken, (req, res) => productCo
 router.post('/newsell', verifyToken_1.verifyToken, (req, res) => sellController.createSell(req, res));
 // Phone routes
 router.post('/newphone', verifyToken_1.verifyToken, (req, res) => phoneController.createPhone(req, res));
-router.get('/phone', verifyToken_1.verifyToken, (req, res) => phoneController.findAllPhones(req, res));
+router.get('/phones', verifyToken_1.verifyToken, (req, res) => phoneController.findAllPhones(req, res));
 router.get('/phone/:id', verifyToken_1.verifyToken, (req, res) => phoneController.findPhoneById(req, res));
 router.delete('/phone/:id', verifyToken_1.verifyToken, (req, res) => phoneController.deletePhone(req, res));
 // Address routes
 router.post('/newaddress', verifyToken_1.verifyToken, (req, res) => addressController.createAddress(req, res));
-router.get('/address', verifyToken_1.verifyToken, (req, res) => addressController.findAllAddresses(req, res));
+router.get('/addresses', verifyToken_1.verifyToken, (req, res) => addressController.findAllAddresses(req, res));
 router.get('/address/:id', verifyToken_1.verifyToken, (req, res) => addressController.findAddressById(req, res));
 router.put('/address/:id', verifyToken_1.verifyToken, (req, res) => addressController.updateAddress(req, res));
 router.delete('/address/:id', verifyToken_1.verifyToken, (req, res) => addressController.deleteAddress(req, res));
