@@ -18,10 +18,6 @@ const AddressModel: AddressSequelizeModelCreator = db.define(
     clienteId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: CustomerModel,
-        key: 'id',
-      },
     },
     rua: {
       type: DataTypes.STRING,

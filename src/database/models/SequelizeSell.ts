@@ -19,18 +19,18 @@ const SellModel: SellSequelizeModelCreator = db.define(
     clienteId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: CustomerModel,
-        key: 'id',
-      },
+      // references: {
+      //   model: 'Clientes',
+      //   key: 'id',
+      // },
     },
     produtoId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: ProductModel,
-        key: 'id',
-      },
+      // references: {
+      //   model: 'Produtos',
+      //   key: 'id',
+      // },
     },
     quantidade: {
       type: DataTypes.INTEGER,
@@ -56,10 +56,10 @@ const SellModel: SellSequelizeModelCreator = db.define(
   }
 );
 
-// Definindo a relação entre SellModel e CustomerModel
-SellModel.belongsTo(CustomerModel, { foreignKey: 'clienteId' });
+// // Definindo a relação entre SellModel e CustomerModel
+// SellModel.belongsTo(CustomerModel, { foreignKey: 'clienteId', onDelete: "CASCADE" });
 
-// Definindo a relação entre SellModel e ProductModel
-SellModel.belongsTo(ProductModel, { foreignKey: 'produtoId' });
+// // Definindo a relação entre SellModel e ProductModel
+// SellModel.belongsTo(ProductModel, { foreignKey: 'produtoId', onDelete: "CASCADE"});
 
 export default SellModel;

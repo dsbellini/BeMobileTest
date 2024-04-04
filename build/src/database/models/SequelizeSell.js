@@ -5,8 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const index_1 = __importDefault(require("./index"));
-const SequelizeCustomer_1 = __importDefault(require("../models/SequelizeCustomer"));
-const SequelizeProduct_1 = __importDefault(require("../models/SequelizeProduct"));
 const SellModel = index_1.default.define('Vendas', {
     id: {
         type: sequelize_1.DataTypes.INTEGER,
@@ -16,18 +14,18 @@ const SellModel = index_1.default.define('Vendas', {
     clienteId: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
-        references: {
-            model: SequelizeCustomer_1.default,
-            key: 'id',
-        },
+        // references: {
+        //   model: 'Clientes',
+        //   key: 'id',
+        // },
     },
     produtoId: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
-        references: {
-            model: SequelizeProduct_1.default,
-            key: 'id',
-        },
+        // references: {
+        //   model: 'Produtos',
+        //   key: 'id',
+        // },
     },
     quantidade: {
         type: sequelize_1.DataTypes.INTEGER,
@@ -50,8 +48,8 @@ const SellModel = index_1.default.define('Vendas', {
     tableName: 'Vendas',
     timestamps: false,
 });
-// Definindo a relação entre SellModel e CustomerModel
-SellModel.belongsTo(SequelizeCustomer_1.default, { foreignKey: 'clienteId' });
-// Definindo a relação entre SellModel e ProductModel
-SellModel.belongsTo(SequelizeProduct_1.default, { foreignKey: 'produtoId' });
+// // Definindo a relação entre SellModel e CustomerModel
+// SellModel.belongsTo(CustomerModel, { foreignKey: 'clienteId', onDelete: "CASCADE" });
+// // Definindo a relação entre SellModel e ProductModel
+// SellModel.belongsTo(ProductModel, { foreignKey: 'produtoId', onDelete: "CASCADE"});
 exports.default = SellModel;

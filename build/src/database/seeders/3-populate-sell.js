@@ -25,7 +25,6 @@ exports.default = {
                 "precoTotal": 450,
                 "dataHora": (0, randomDate_1.default)(startDate, endDate)
             },
-            // Vendas para Sebastian Vettel (clienteId = 2)
             {
                 "clienteId": 2,
                 "produtoId": 3,
@@ -42,7 +41,6 @@ exports.default = {
                 "precoTotal": 500,
                 "dataHora": (0, randomDate_1.default)(startDate, endDate)
             },
-            // Vendas para Max Verstappen (clienteId = 3)
             {
                 "clienteId": 3,
                 "produtoId": 4,
@@ -59,7 +57,6 @@ exports.default = {
                 "precoTotal": 350,
                 "dataHora": (0, randomDate_1.default)(startDate, endDate)
             },
-            // Vendas para Valtteri Bottas (clienteId = 4)
             {
                 "clienteId": 4,
                 "produtoId": 5,
@@ -76,7 +73,6 @@ exports.default = {
                 "precoTotal": 900,
                 "dataHora": (0, randomDate_1.default)(startDate, endDate)
             },
-            // Vendas para Daniel Ricciardo (clienteId = 5)
             {
                 "clienteId": 5,
                 "produtoId": 2,

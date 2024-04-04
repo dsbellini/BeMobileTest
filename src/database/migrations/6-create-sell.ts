@@ -13,18 +13,19 @@ export default {
       clienteId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Clientes',
-          key: 'id',
-        },
+        // references: {
+        //   model: 'Clientes',
+        //   key: 'id',
+        // },
       },
       produtoId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: {
-          model: 'Produtos',
-          key: 'id',
-        },
+        // references: {
+        //   model: 'Produtos',
+        //   key: 'id',
+        // },
+        
       },
       quantidade: {
         type: DataTypes.INTEGER,

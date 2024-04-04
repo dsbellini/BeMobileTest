@@ -8,7 +8,7 @@ exports.default = {
                 "rua": "Rua A",
                 "numero": 10,
                 "bairro": "Bairro A",
-                "cidade": "Cidade A",
+                "cidade": "Mônaco",
                 "estado": "Estado A",
                 "cep": 12345678,
                 "complemento": "Complemento A"
