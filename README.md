@@ -39,7 +39,9 @@ Neste projeto desenvolvi uma API RESTful conectada a um banco de dados MySQL. A 
     - Esse comando subirá um container com a aplicação e outro com o banco de dados MySQL já com dados preenchidos nas tabelas para uma melhor avaliação.
 
   3.2. Rodando a aplicação sem Docker
-    - Após instalar as dependências, execute o comando no terminal:
+    - Para rodar a aplicação sem o Docker, é necessário remover o arquivo " .env " que está na raiz do projeto.
+    - Você pode renomeá-lo ou excluir, fica a seu critério. É importante que não haja a variável de ambiente para rodar o projeto sem o Docker.
+    - Após instalar as dependências e remover a variável de ambiente, execute o comando no terminal:
         - `npm start`
         - Esse comando subirá a aplicação na porta 3000
         - É importante ressaltar que é necessário ter o MySQL instalado na máquina para rodar a aplicação sem Docker.
