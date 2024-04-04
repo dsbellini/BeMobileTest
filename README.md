@@ -59,6 +59,7 @@ Agradeço a compreensão e a oportunidade de participar do processo seletivo. �
   - Utilizando o arquivo de rotas:
     - Importe o arquivo `BeMobileTest.postman.json` para o Postman ou Insomnia.
     - O arquivo contém as rotas da aplicação para facilitar a execução dos testes.
+    - Atenção: sempre que for realizar uma requisição, lembre-se de selecionar a opção " json ". Por padrão, o Insomnia/Postman seleciona a opção " text ".
 
   <strong>Rotas disponíveis</strong>
 
