@@ -1,8 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "rootDir": ".",
+    "outDir": "./build",
+    "target": "es2019",
     "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true
-  }
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "src/@types",
+      "./node_modules/@types"
+    ],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
+

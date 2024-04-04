@@ -2,10 +2,15 @@
   "name": "bemobiletest",
   "version": "1.0.0",
   "description": "Teste técnico BeMobile",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "tsc",
+    "db:drop": "ts-node node_modules/.bin/sequelize-cli db:drop",
+    "db:create": "ts-node node_modules/.bin/sequelize-cli db:create",
+    "db:migrate": "ts-node node_modules/.bin/sequelize-cli db:migrate",
+    "db:seed": "ts-node node_modules/.bin/sequelize-cli db:seed:all",
+    "db:reset": "npm run build && ts-node node_modules/.bin/sequelize-cli db:drop && ts-node node_modules/.bin/sequelize-cli db:create && ts-node node_modules/.bin/sequelize-cli db:migrate && ts-node node_modules/.bin/sequelize-cli db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,10 +21,14 @@
     "@types/node": "^20.12.3",
     "express": "^4.19.2",
     "nodemon": "^3.1.0",
+    "sequelize": "^6.37.2",
+    "sequelize-cli": "^6.3.0",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.3"
   },
   "dependencies": {
+    "@types/sequelize": "^4.28.20",
     "mysql2": "^3.9.3"
   }
 }
