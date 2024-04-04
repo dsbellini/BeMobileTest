@@ -1,9 +1,9 @@
 import { Model, QueryInterface, DataTypes, Sequelize } from 'sequelize';
-import { IPhoneNumber } from '../interfaces';
+import { ISell } from '../interfaces';
 
 export default {
   up: async (queryInterface: QueryInterface) => {
-    await queryInterface.createTable<Model<IPhoneNumber>>('Telefones', {
+    await queryInterface.createTable<Model<ISell>>('Vendas', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -18,23 +18,35 @@ export default {
           key: 'id',
         },
       },
-      numero: {
+      produtoId: {
         type: DataTypes.INTEGER,
-      },
-      createdAt: {
         allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        references: {
+          model: 'Produtos',
+          key: 'id',
+        },
       },
-      updatedAt: {
+      quantidade: {
+        type: DataTypes.INTEGER,
         allowNull: false,
+      },
+      precoUnitario: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+      },
+      precoTotal: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
+      },
+      dataHora: {
         type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
       },
     });
   },
 
   down: async (queryInterface: QueryInterface) => {
-    await queryInterface.dropTable('Telefones');
+    await queryInterface.dropTable('Vendas');
   },
 };

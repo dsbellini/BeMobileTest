@@ -12,19 +12,11 @@ export default {
       },
       nome: {
         type: DataTypes.STRING,
+        allowNull: false,
       },
       cpf: {
         type: DataTypes.INTEGER,
-      },
-      createdAt: {
         allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
     });
   },

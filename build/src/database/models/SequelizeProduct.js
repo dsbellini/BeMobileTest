@@ -23,8 +23,18 @@ const ProductModel = index_1.default.define('Produtos', {
         type: sequelize_1.DataTypes.FLOAT,
         allowNull: false,
     },
+    excluido: {
+        type: sequelize_1.DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
 }, {
     tableName: 'Produtos',
     timestamps: false,
+    defaultScope: {
+        where: {
+            excluido: false,
+        },
+    },
 });
 exports.default = ProductModel;

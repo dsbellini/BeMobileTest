@@ -20,16 +20,6 @@ const UsuarioModel: UsuarioSequelizeModelCreator = db.define(
     senha: {
       type: DataTypes.STRING,
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
   },
   {
     tableName: 'Usuarios',

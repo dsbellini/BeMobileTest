@@ -27,16 +27,6 @@ const PhoneModel: PhoneNumberSequelizeModelCreator = db.define(
         key: 'id',         
       },
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: db.literal('CURRENT_TIMESTAMP'),
-    },
   },
   {
     tableName: 'Telefones',

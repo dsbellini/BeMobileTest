@@ -26,10 +26,18 @@ const ProductModel: ProductSequelizeModelCreator = db.define(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    excluido: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
   },
   {
     tableName: 'Produtos',
     timestamps: false,
+    defaultScope: {
+      attributes: { exclude: ['excluido'] }, // Exclui a chave "excluido" por padrão nas consultas.
+    },
   }
 );
 

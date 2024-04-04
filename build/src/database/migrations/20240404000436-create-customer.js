@@ -12,9 +12,11 @@ exports.default = {
             },
             nome: {
                 type: sequelize_1.DataTypes.STRING,
+                allowNull: false,
             },
             cpf: {
                 type: sequelize_1.DataTypes.INTEGER,
+                allowNull: false,
             },
             createdAt: {
                 allowNull: false,

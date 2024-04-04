@@ -17,16 +17,6 @@ const UsuarioModel = index_1.default.define('Usuarios', {
     senha: {
         type: sequelize_1.DataTypes.STRING,
     },
-    createdAt: {
-        type: sequelize_1.DataTypes.DATE,
-        allowNull: false,
-        defaultValue: index_1.default.literal('CURRENT_TIMESTAMP'),
-    },
-    updatedAt: {
-        type: sequelize_1.DataTypes.DATE,
-        allowNull: false,
-        defaultValue: index_1.default.literal('CURRENT_TIMESTAMP'),
-    },
 }, {
     tableName: 'Usuarios',
     timestamps: false,
